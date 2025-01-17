@@ -1,70 +1,68 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-left:40px;
-  padding-right:40px;
-  .header-logo {
-    width: 50%;
+  align-items: center;
+  padding: 20px 40px;
 
-    img {
-      max-width: 100%;
-      height: auto;
+  .header-logo {
+    font-size: 1.5rem;
+    color: #000;
+    img{
+      width: 80px;
     }
   }
 
   .header-authen {
     display: flex;
-    justify-content: space-between;
-    gap: 5rem;
+    align-items: center;
+    gap: 80px;
 
     a {
       text-decoration: none;
       font-size: 16px;
-      color: $text-color;
+      color: #000;
+    
       display: flex;
       align-items: center;
-      height: 100%;
+    
+      &:hover {
+        text-decoration: none; /* Đảm bảo không có gạch chân khi hover */
+      }
     }
 
     button {
-      padding: 12px 32px;
-      background-color: $primary-color;
+      padding: 10px 40px;
+      background-color: #fcd97d;
       border: none;
       font-size: 16px;
       cursor: pointer;
-      border-radius: 5rem;
-      color: $text-color;
+      border-radius: 50px;
+      color: #000;
+      gap: 30px;
 
       &:hover {
-        background-color: $primary-color-hover;
+        background-color: #f5c867;
       }
     }
   }
 }
+
 @media (max-width: 576px) {
   .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 200px;
-      gap: 10px;
-  }
+    flex-direction: row;
+    padding: 10px 20px;
 
-  .hero h1 {
-      font-size: 1.8rem;
-  }
+    .header-authen {
+      gap: 80px;
 
-  .hero-buttons button {
-      width: 80%;
-  }
+      a {
+        font-size: 0.9rem;
+      }
 
-  .header-authen a {
-      font-size: 0.9rem;
-  }
-
-  .header-authen button {
-      font-size: 0.9rem;
-      padding: 8px 16px;
+      button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
   }
 }

@@ -682,42 +682,62 @@ body {
         text-align: center;
         padding: 20px;
         gap: 20px;
-
+      
         .image {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
+          display: flex;
+          flex-direction: row; /* Hình ảnh sắp xếp theo hàng ngang */
+          justify-content: center; /* Canh giữa các hình ảnh */
+          align-items: center;
+          gap: 10px; /* Khoảng cách giữa các hình ảnh */
+      
+          div {
+            flex: 1;
+            max-width: 150px; /* Giới hạn chiều rộng tối đa của từng hình ảnh */
+            height: auto;
+      
             img {
-                width: 100%;
-                max-width: 300px;
-                height: auto;
-                border-radius: $border-radius-image;
+              width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của container */
+              height: 300px; /* Chiều cao cố định */
+              object-fit: cover; /* Đảm bảo hình ảnh không bị méo và vừa khung */
+              border-radius: $border-radius-image; /* Bo góc hình ảnh */
             }
+          }
         }
-
+      
         div:last-child {
-            h1 {
-                font-size: 1.5rem;
-                line-height: 1.4;
-
-                span {
-                    color: $primary-color;
-                }
+            margin-left: 20px;
+          h1 {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+      
+            span {
+              color: $primary-color;
             }
-
-            p {
-                font-size: 0.9rem;
-                margin-bottom: 10px;
+          }
+      
+          p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #666;
+          }
+      
+          button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: $border-radius;
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+      
+            &:hover {
+              background-color: darken($primary-color, 10%);
             }
-
-            button {
-                padding: 10px 20px;
-                font-size: 1rem;
-                border-radius: $border-radius;
-            }
+          }
         }
-    }
+      }
+      
 
     .podcast-container {
         padding: 20px;
@@ -788,70 +808,75 @@ body {
     .audio-section {
         display: flex;
         flex-direction: column-reverse;
-        gap: 15px;
+        gap: 20px; /* Tạo khoảng cách giữa hình ảnh và nội dung */
         padding: 20px;
-
+        align-items: center;
+      
         .content {
-            text-align: center;
-
-            h1 {
-                font-size: 1.8rem;
-                text-align: left;
-
-                span {
-                    color: $primary-color;
-                }
+          text-align: center;
+      
+          h1 {
+            font-size: 1.6rem; /* Kích thước chữ nhỏ hơn để phù hợp với bố cục */
+            line-height: 1.4; /* Dòng chữ cân đối hơn */
+            text-align: left; /* Căn giữa tiêu đề */
+      
+            span {
+              color: $primary-color; /* Màu nổi bật */
             }
-
-            p {
-                font-size: 1rem;
-                margin-bottom: 1rem;
-                text-align: left;
-            }
-
-            .title-point {
-                
-                gap: 13px;
-                
-                align-items: start;
-
-                .title-item {
-                    width: 100%;
-                    max-width: 150px;
-                    padding: 10px;
-                    background-color: #fff;
-                   
-                    border-radius: $border-radius;
-
-                    p {
-                        font-size: 0.9rem;
-                        font-weight: bold;
-                    }
-                }
-            }
-
-            button {
-                display: flex;
-                padding: 15px 55px;
-                font-size: 1rem;
-                border-radius: $border-radius;
-                text-align: left;
-            }
-        }
-
-        .image {
+          }
+      
+          p {
+            font-size: 1rem; /* Giữ kích thước chữ hợp lý */
+            margin-bottom: 15px;
+            text-align: left; /* Căn giữa nội dung */
+            color: #666;
+          }
+      
+          .title-point {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-
-            img {
-                max-width: 300px;
-                height: auto;
-                border-radius: $border-radius;
+            flex-direction: column; /* Các mục hiển thị dọc */
+            gap: 10px; /* Khoảng cách giữa các mục */
+            margin-left: 20px;
+            .title-item {
+                width: 100%;
+              text-align: center; /* Căn giữa văn bản */
+              font-size: 0.9rem; /* Kích thước chữ nhỏ gọn */
+              font-weight: bold; /* Chữ in đậm */
+              color: #333;
             }
+          }
+      
+          button {
+            display: flex;
+            padding: 12px 30px;
+            font-size: 1rem;
+            background-color: $primary-color; /* Màu nền nút */
+            color: #fff; /* Màu chữ */
+            border: none;
+            border-radius: $border-radius;
+            cursor: pointer;
+            font-weight: bold;
+      
+            &:hover {
+              background-color: darken($primary-color, 10%); /* Màu tối hơn khi hover */
+            }
+          }
         }
-    }
+      
+        .image {
+          display: flex;
+          justify-content: center; /* Căn giữa hình ảnh */
+          gap: 10px; /* Khoảng cách giữa các hình ảnh */
+      
+          img {
+            width: 177px;
+            height: 297px;
+            object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+            border-radius: $border-radius; /* Bo góc hình ảnh */
+          }
+        }
+      }
+      
 
     .plan-section {
         padding: 20px;

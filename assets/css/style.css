@@ -6,67 +6,65 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
+  align-items: center;
+  padding: 20px 40px;
 }
 
 .header .header-logo {
-  width: 50%;
+  font-size: 1.5rem;
+  color: #000;
 }
 
 .header .header-logo img {
-  max-width: 100%;
-  height: auto;
+  width: 80px;
 }
 
 .header .header-authen {
   display: flex;
-  justify-content: space-between;
-  gap: 5rem;
+  align-items: center;
+  gap: 80px;
 }
 
 .header .header-authen a {
   text-decoration: none;
   font-size: 16px;
-  color: #000000;
+  color: #000;
   display: flex;
   align-items: center;
-  height: 100%;
+}
+
+.header .header-authen a:hover {
+  text-decoration: none;
+  /* Đảm bảo không có gạch chân khi hover */
 }
 
 .header .header-authen button {
-  padding: 12px 32px;
-  background-color: #F5D98C;
+  padding: 10px 40px;
+  background-color: #fcd97d;
   border: none;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5rem;
-  color: #000000;
+  border-radius: 50px;
+  color: #000;
+  gap: 30px;
 }
 
 .header .header-authen button:hover {
-  background-color: #f1c95d;
+  background-color: #f5c867;
 }
 
 @media (max-width: 576px) {
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 200px;
-    gap: 10px;
+    flex-direction: row;
+    padding: 10px 20px;
   }
-  .hero h1 {
-    font-size: 1.8rem;
+  .header .header-authen {
+    gap: 80px;
   }
-  .hero-buttons button {
-    width: 80%;
-  }
-  .header-authen a {
+  .header .header-authen a {
     font-size: 0.9rem;
   }
-  .header-authen button {
+  .header .header-authen button {
     font-size: 0.9rem;
     padding: 8px 16px;
   }
@@ -696,18 +694,37 @@ body {
   }
   .promo-section .image {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    /* Hình ảnh sắp xếp theo hàng ngang */
+    justify-content: center;
+    /* Canh giữa các hình ảnh */
     align-items: center;
+    gap: 10px;
+    /* Khoảng cách giữa các hình ảnh */
   }
-  .promo-section .image img {
-    width: 100%;
-    max-width: 300px;
+  .promo-section .image div {
+    flex: 1;
+    max-width: 150px;
+    /* Giới hạn chiều rộng tối đa của từng hình ảnh */
     height: auto;
+  }
+  .promo-section .image div img {
+    width: 100%;
+    /* Hình ảnh chiếm toàn bộ chiều rộng của container */
+    height: 300px;
+    /* Chiều cao cố định */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh không bị méo và vừa khung */
     border-radius: 10px;
+    /* Bo góc hình ảnh */
+  }
+  .promo-section div:last-child {
+    margin-left: 20px;
   }
   .promo-section div:last-child h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.4;
+    margin-bottom: 10px;
   }
   .promo-section div:last-child h1 span {
     color: #F5D98C;
@@ -715,11 +732,19 @@ body {
   .promo-section div:last-child p {
     font-size: 0.9rem;
     margin-bottom: 10px;
+    color: #666;
   }
   .promo-section div:last-child button {
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 30px;
+    background-color: #F5D98C;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .promo-section div:last-child button:hover {
+    background-color: #f1c95d;
   }
   .podcast-container {
     padding: 20px;
@@ -780,56 +805,83 @@ body {
   .audio-section {
     display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: 20px;
+    /* Tạo khoảng cách giữa hình ảnh và nội dung */
     padding: 20px;
+    align-items: center;
   }
   .audio-section .content {
     text-align: center;
   }
   .audio-section .content h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    /* Kích thước chữ nhỏ hơn để phù hợp với bố cục */
+    line-height: 1.4;
+    /* Dòng chữ cân đối hơn */
     text-align: left;
+    /* Căn giữa tiêu đề */
   }
   .audio-section .content h1 span {
     color: #F5D98C;
+    /* Màu nổi bật */
   }
   .audio-section .content p {
     font-size: 1rem;
-    margin-bottom: 1rem;
+    /* Giữ kích thước chữ hợp lý */
+    margin-bottom: 15px;
     text-align: left;
+    /* Căn giữa nội dung */
+    color: #666;
   }
   .audio-section .content .title-point {
-    gap: 13px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    /* Các mục hiển thị dọc */
+    gap: 10px;
+    /* Khoảng cách giữa các mục */
+    margin-left: 20px;
   }
   .audio-section .content .title-point .title-item {
     width: 100%;
-    max-width: 150px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 30px;
-  }
-  .audio-section .content .title-point .title-item p {
+    text-align: center;
+    /* Căn giữa văn bản */
     font-size: 0.9rem;
+    /* Kích thước chữ nhỏ gọn */
     font-weight: bold;
+    /* Chữ in đậm */
+    color: #333;
   }
   .audio-section .content button {
     display: flex;
-    padding: 15px 55px;
+    padding: 12px 30px;
     font-size: 1rem;
+    background-color: #F5D98C;
+    /* Màu nền nút */
+    color: #fff;
+    /* Màu chữ */
+    border: none;
     border-radius: 30px;
-    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .audio-section .content button:hover {
+    background-color: #f1c95d;
+    /* Màu tối hơn khi hover */
   }
   .audio-section .image {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+    justify-content: center;
+    /* Căn giữa hình ảnh */
+    gap: 10px;
+    /* Khoảng cách giữa các hình ảnh */
   }
   .audio-section .image img {
-    max-width: 300px;
-    height: auto;
+    width: 177px;
+    height: 297px;
+    object-fit: cover;
+    /* Đảm bảo hình ảnh không bị méo */
     border-radius: 30px;
+    /* Bo góc hình ảnh */
   }
   .plan-section {
     padding: 20px;
