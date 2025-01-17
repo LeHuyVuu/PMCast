@@ -1,0 +1,38 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    width: 100vw; 
+    left: 50%;
+    transform: translateX(-50%); 
+
+    .footer-content {
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    hr {
+        width: 100%;
+        border: none;
+        height: 1px;
+        background-color: #fff; 
+        margin: 10px 0;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .footer-copyright {
+        margin-top: 10px;
+        border-top: 1px solid #fff; 
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 10px; 
+    }
+
+}

@@ -1,0 +1,13 @@
+@import './sass/variable';
+@import './sass/base';
+@import './sass/header';
+@import './sass/body';
+@import './sass/footer';
+
+body {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $font-family;
+    overflow-x: hidden;
+}
