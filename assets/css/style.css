@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -6,6 +7,8 @@
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .header .header-logo {
@@ -74,6 +77,8 @@
   justify-content: space-between;
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
   align-items: center;
   margin-top: 3rem;
   background-color: #FFFDF5;
@@ -98,7 +103,7 @@
 }
 
 .hero .hero-content .text {
-  max-width: 50%;
+  width: 50%;
 }
 
 .hero .hero-content .text p {
@@ -223,6 +228,8 @@
   justify-content: space-between;
   padding: 20px;
   gap: 8rem;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .promo-section .image {
@@ -284,6 +291,8 @@
 .podcast-container {
   text-align: center;
   margin: 20px 0;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .podcast-container h2 {
@@ -346,6 +355,8 @@
   padding-top: 50px;
   padding-bottom: 50px;
   padding: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .audio-section .content h1 {
@@ -412,6 +423,11 @@
   border-radius: 12px;
 }
 
+.plan-section {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 .plan-section h1 {
   font-size: 3.5rem;
   text-align: center;
@@ -436,6 +452,7 @@
 
 .plan-section .plan-detail .pricing-card .pricing-header .plan-type {
   display: inline-block;
+  color: black;
   border: lightgray solid;
   font-weight: 500;
   font-size: 1.7rem;
@@ -488,6 +505,8 @@
   padding-left: 5rem;
   padding-right: 5rem;
   margin-top: 5rem;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .contact .contact-heading {
@@ -557,6 +576,346 @@
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.footer .footer-content {
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+
+.footer .footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer .footer-copyright {
+  margin-top: 10px;
+  border-top: 1px solid #fff;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+@media (max-width: 450px) {
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  .hero .hero-content {
+    padding: 20px 0;
+  }
+  .hero .hero-content .text {
+    width: 100%;
+  }
+  .hero .hero-content .hero-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .hero .hero-content .hero-text h1 span {
+    color: #F5D98C;
+  }
+  .hero .hero-content .text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+    align-items: center;
+  }
+  .hero .hero-content .hero-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .hero .hero-content .hero-button button {
+    padding: 20px 15px;
+    font-size: 1rem;
+    border-radius: 30px;
+    width: 60%;
+  }
+  .hero .hero-content .hero-listener {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero .hero-image {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    position: relative;
+  }
+  .hero .hero-image .pic1,
+  .hero .hero-image .pic2,
+  .hero .hero-image .pic3,
+  .hero .hero-image .pic4 {
+    width: 90%;
+    max-width: 182px;
+    height: auto;
+  }
+  .hero .hero-image .circle-black {
+    position: absolute;
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
+    font-size: 12px;
+  }
+  .promo-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .promo-section .image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .promo-section .image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  .promo-section div:last-child h1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  .promo-section div:last-child h1 span {
+    color: #F5D98C;
+  }
+  .promo-section div:last-child p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .promo-section div:last-child button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+  }
+  .podcast-container {
+    padding: 20px;
+  }
+  .podcast-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .podcast-container h2 span {
+    color: #F5D98C;
+  }
+  .podcast-container .explore-items {
+    display: flex;
+    flex-direction: column;
+    /* Hiển thị các mục theo cột */
+    gap: 20px;
+    /* Khoảng cách giữa các mục */
+    align-items: center;
+    /* Căn giữa các mục */
+    width: 100%;
+  }
+  .podcast-container .explore-items .item {
+    width: 100%;
+    /* Chiều rộng đầy đủ */
+    max-width: 340px;
+    /* Giới hạn chiều rộng tối đa */
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px 20px;
+    /* Bo góc */
+    overflow: hidden;
+    /* Ẩn phần thừa của nội dung */
+  }
+  .podcast-container .explore-items .item img {
+    width: 100%;
+    height: 300px;
+    /* Đặt chiều cao cố định cho hình ảnh */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh vừa khung và không bị biến dạng */
+    border-radius: 20px 20px;
+    /* Chỉ bo góc phần trên */
+  }
+  .podcast-container .explore-items .item .content {
+    padding: 15px;
+    /* Khoảng cách bên trong */
+    text-align: left;
+    /* Căn chữ sang trái */
+  }
+  .podcast-container .explore-items .item .content h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .podcast-container .explore-items .item .content p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  .audio-section {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    padding: 20px;
+  }
+  .audio-section .content {
+    text-align: center;
+  }
+  .audio-section .content h1 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+  .audio-section .content h1 span {
+    color: #F5D98C;
+  }
+  .audio-section .content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .audio-section .content .title-point {
+    gap: 13px;
+    align-items: start;
+  }
+  .audio-section .content .title-point .title-item {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+  .audio-section .content .title-point .title-item p {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  .audio-section .content button {
+    display: flex;
+    padding: 15px 55px;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-align: left;
+  }
+  .audio-section .image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  .audio-section .image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 30px;
+  }
+  .plan-section {
+    padding: 20px;
+  }
+  .plan-section h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .plan-section h1 span {
+    color: #F5D98C;
+  }
+  .plan-section .plan-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .plan-section .plan-detail .pricing-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    background-color: #FFFDF5;
+    border-radius: 30px;
+    text-align: left;
+  }
+  .plan-section .plan-detail .pricing-card .pricing-header .plan-type {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+  }
+  .plan-section .plan-detail .pricing-card .pricing-header .plan-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .plan-section .plan-detail .pricing-card .list-item ul {
+    padding: 0;
+    list-style: none;
+    margin-left: 20px;
+  }
+  .plan-section .plan-detail .pricing-card .list-item ul li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  .plan-section .plan-detail .pricing-card .pricing-action .trial-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #F5D98C;
+    border-radius: 30px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .contact .contact-heading {
+    text-align: left;
+  }
+  .contact .contact-image img {
+    max-width: 80%;
+    height: auto;
+  }
+  .contact .contact-form input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+  .contact .contact-form button {
+    width: 55%;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+    border-radius: 30px;
+  }
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer .footer-content {
@@ -588,7 +947,6 @@
 }
 
 body {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
